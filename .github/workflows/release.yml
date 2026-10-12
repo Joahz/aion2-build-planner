@@ -38,3 +38,5 @@ jobs:
 
             If Windows says "Windows protected your PC", click **More info → Run anyway** (the exe isn't code-signed).
 
+            **Can this get me banned?** Very unlikely. This app never reads or changes the game's memory, files or network traffic, never injects anything into the game, and never presses keys for you. See the README for details.
+
