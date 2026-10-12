@@ -19,10 +19,24 @@ Get `Aion2BuildPlanner.exe` from the **Releases** page and double-click it.
 It needs no install. Windows SmartScreen may warn you because the exe isn't
 signed: click **More info → Run anyway**.
 
-## Is it safe for my account?
+## Can this get me banned?
 
-Yes. The planner never reads the game, its memory or its network traffic, and
-it never presses keys. Everything comes from what you type in.
+It's very unlikely. The planner doesn't interact with the game at all, and it
+doesn't need to be open while you play.
+
+**What it never does:**
+- read or change the game's memory or files
+- inject anything into the game
+- read the game's network traffic
+- press keys or click for you (the Macros tab only *shows* key sequences for you to learn or copy)
+
+Everything comes from what you type in. That's why it can't read your
+character automatically: the only ways to do that on NA/EU servers would be
+reading the game's memory or traffic, which breaks NCSOFT's rules and can get
+accounts banned.
+
+Only NCSOFT decides what its anti-cheat flags, so nobody can promise 100%. An
+app that never touches the game is about as low-risk as a tool can be.
 
 ## How recommendations work
 
