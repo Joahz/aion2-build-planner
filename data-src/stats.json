@@ -1,0 +1,788 @@
+{
+ "definitions": [
+  {
+   "id": "abnormalaccuracy",
+   "label": "Status Effect Chance",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 131
+  },
+  {
+   "id": "abnormalresistance",
+   "label": "Status Effect Resist",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 100
+  },
+  {
+   "id": "accuracy",
+   "label": null,
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 80
+  },
+  {
+   "id": "additionalhitrate",
+   "label": "Multi-hit Chance",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 125
+  },
+  {
+   "id": "additionalhitresistrate",
+   "label": "Multi-hit Resist",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 6
+  },
+  {
+   "id": "agi",
+   "label": "Precision",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 115
+  },
+  {
+   "id": "amplifyalldamage",
+   "label": "Damage Boost",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 132
+  },
+  {
+   "id": "amplifycriticaldamage",
+   "label": "Critical Damage Boost",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 16
+  },
+  {
+   "id": "amplifyhphealget",
+   "label": "Incoming Heal",
+   "group": "Vitality",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 12
+  },
+  {
+   "id": "amplifyweapondamage",
+   "label": "Weapon Damage Boost",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 123
+  },
+  {
+   "id": "armordefense",
+   "label": "Defense",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2567
+  },
+  {
+   "id": "armorevasion",
+   "label": "Evasion",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 120
+  },
+  {
+   "id": "backattackdamage",
+   "label": "Back Attack",
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 115
+  },
+  {
+   "id": "backattackdefense",
+   "label": "Back Defense",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 84
+  },
+  {
+   "id": "block",
+   "label": "Block",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 377
+  },
+  {
+   "id": "blockpierce",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 38
+  },
+  {
+   "id": "bossnpcadddamage",
+   "label": "Boss Damage",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "bossnpcamplifydamage",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 16
+  },
+  {
+   "id": "bossnpcdecreasedamage",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 16
+  },
+  {
+   "id": "bossnpcdefense",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "combatspeed",
+   "label": "Combat Speed",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 135
+  },
+  {
+   "id": "con",
+   "label": "Constitution",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 84
+  },
+  {
+   "id": "cooltimedecrease",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 4
+  },
+  {
+   "id": "critical",
+   "label": "Critical Hit",
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 492
+  },
+  {
+   "id": "criticaladddamage",
+   "label": "Critical Attack",
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 115
+  },
+  {
+   "id": "criticaldamagedefense",
+   "label": "Critical Damage Defense",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 84
+  },
+  {
+   "id": "criticalresist",
+   "label": "Critical Hit Resist",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 254
+  },
+  {
+   "id": "damageratio",
+   "label": "Attack increase",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 44
+  },
+  {
+   "id": "death",
+   "label": "Death [Triniel]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "decreasecriticaldamage",
+   "label": "Critical Damage Tolerance",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 16
+  },
+  {
+   "id": "decreasedamage",
+   "label": "Damage Tolerance",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 16
+  },
+  {
+   "id": "decreaseshieldblock",
+   "label": "Shield Block Damage Reduction Rate",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 0
+  },
+  {
+   "id": "decreaseweaponblock",
+   "label": "Parry Damage Reduction Rate",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 121
+  },
+  {
+   "id": "decreaseweapondamage",
+   "label": "Weapon Damage Tolerance",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 20
+  },
+  {
+   "id": "defense",
+   "label": "Defense",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 172
+  },
+  {
+   "id": "defensepierce",
+   "label": "Penetration",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 10
+  },
+  {
+   "id": "defenseratio",
+   "label": "Defense increase",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 56
+  },
+  {
+   "id": "destiny",
+   "label": "Destiny [Marchutan]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "destruction",
+   "label": "Destruction [Zikel]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "dex",
+   "label": "Dexterity",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 84
+  },
+  {
+   "id": "evasion",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 38
+  },
+  {
+   "id": "fixingdamage",
+   "label": "Attack",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 134
+  },
+  {
+   "id": "fpmax",
+   "label": "Flight Power",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 36
+  },
+  {
+   "id": "freedom",
+   "label": "Freedom [Vaizel]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "frontattackdamage",
+   "label": "Front Attack",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 115
+  },
+  {
+   "id": "frontattackdefense",
+   "label": "Front Defense",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 84
+  },
+  {
+   "id": "hardhit",
+   "label": "Double Chance",
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 24
+  },
+  {
+   "id": "hardhitresist",
+   "label": "Double Resist",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 24
+  },
+  {
+   "id": "hpmax",
+   "label": "HP",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2348
+  },
+  {
+   "id": "hppotionrate",
+   "label": "HP Potion Recovery increase",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 0
+  },
+  {
+   "id": "hpregen",
+   "label": "Natural HP Regen",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 120
+  },
+  {
+   "id": "ignoreironwall",
+   "label": "Endurance Penetration",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 32
+  },
+  {
+   "id": "ignorerestoration",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 8
+  },
+  {
+   "id": "illusion",
+   "label": "Illusion [Kaisinel]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "int",
+   "label": "Intelligence",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 36
+  },
+  {
+   "id": "ironwall",
+   "label": "Endurance",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 56
+  },
+  {
+   "id": "justice",
+   "label": "Justice [Nezekan]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "life",
+   "label": "Life [Yustiel]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "maxhpratio",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 8
+  },
+  {
+   "id": "maxshieldblock",
+   "label": "Shield Block Damage Reduction Amount",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 0
+  },
+  {
+   "id": "maxweaponblock",
+   "label": "Parry Damage Reduction Amount",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 121
+  },
+  {
+   "id": "movespeed",
+   "label": "Move Speed",
+   "group": null,
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 12
+  },
+  {
+   "id": "mpmax",
+   "label": "MP",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 383
+  },
+  {
+   "id": "mpregen",
+   "label": "Natural MP Regen",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 120
+  },
+  {
+   "id": "perfect",
+   "label": "Perfect Chance",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 64
+  },
+  {
+   "id": "perfectresist",
+   "label": "Perfect Resist",
+   "group": "Defense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 40
+  },
+  {
+   "id": "pveaccuracy",
+   "label": "PvE Accuracy",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "pveadddamage",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "pveamplifydamage",
+   "label": "PvE Damage Boost",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 93
+  },
+  {
+   "id": "pvedamagedefense",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "pvedecreasedamage",
+   "label": "PvE Damage Tolerance",
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 66
+  },
+  {
+   "id": "pveevasion",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "pvpaccuracy",
+   "label": "PvP Accuracy",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 49
+  },
+  {
+   "id": "pvpadddamage",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "pvpamplifydamage",
+   "label": "PvP Damage Boost",
+   "group": "Offense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 36
+  },
+  {
+   "id": "pvpcritical",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "pvpcriticalresist",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "pvpdamagedefense",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "pvpdecreasedamage",
+   "label": null,
+   "group": "Defense",
+   "isPercent": true,
+   "storedScale": "value/100 = %",
+   "usedInScoutData": 24
+  },
+  {
+   "id": "pvpevasion",
+   "label": null,
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 48
+  },
+  {
+   "id": "restoration",
+   "label": "Regeneration",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 56
+  },
+  {
+   "id": "sealstoneadddamage",
+   "label": "Power Shard Damage Bonus",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 4
+  },
+  {
+   "id": "space",
+   "label": "Space [Israphel]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "str",
+   "label": "Might",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 117
+  },
+  {
+   "id": "time",
+   "label": "Time [Siel]",
+   "group": null,
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  },
+  {
+   "id": "weaponaccuracy",
+   "label": "Accuracy",
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 356
+  },
+  {
+   "id": "weapondamage",
+   "label": "Max Attack",
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 557
+  },
+  {
+   "id": "weaponfixingdamage",
+   "label": "Attack",
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 748
+  },
+  {
+   "id": "weaponmindamage",
+   "label": "Min Attack",
+   "group": "Offense",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 519
+  },
+  {
+   "id": "wis",
+   "label": "Willpower",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 84
+  },
+  {
+   "id": "wisdom",
+   "label": "Wisdom [Lumiel]",
+   "group": "Vitality",
+   "isPercent": false,
+   "storedScale": "flat",
+   "usedInScoutData": 2
+  }
+ ],
+ "statCalculatorFormula": {
+  "afterFlat": "(base + equipFlat + otherFlat) * (1 + (equipPct + otherPct)/100)",
+  "baseOnly": "base * (1 + (equipPct + otherPct)/100) + equipFlat + otherFlat",
+  "siteDisclaimer": "Stat Calculator: 'Does not convert ratings to percentages, enforce caps, or claim an official combat formula.'",
+  "presets": {
+   "offense": [
+    "weapondamage",
+    "critical",
+    "accuracy",
+    "pveamplifydamage",
+    "pvpamplifydamage"
+   ],
+   "defense": [
+    "armordefense",
+    "block",
+    "armorevasion",
+    "criticalresist",
+    "pvedecreasedamage"
+   ],
+   "vitality": [
+    "hpmax",
+    "mpmax",
+    "hpregen",
+    "amplifyhphealget",
+    "decreasedamage"
+   ]
+  }
+ },
+ "classStatPriority": {
+  "assassin": [
+   "Attack",
+   "Critical",
+   "Damage Boost",
+   "Accuracy",
+   "Frontal Attack"
+  ],
+  "ranger": [
+   "Attack",
+   "Critical",
+   "Accuracy",
+   "Damage Boost",
+   "Move Speed"
+  ]
+ },
+ "classStatPriorityNote": "From each class page 'Suggested stat direction' (site-authored guide text, not game data).",
+ "notAvailable": [
+  "damage formula",
+  "rating->percent conversion curves",
+  "stat caps",
+  "per-level character base stats"
+ ],
+ "sources": [
+  "https://gamers4.life/aion-2/database/en/stat-calculator/",
+  "https://gamers4.life/aion-2/database/_next/static/chunks/app/%5Blang%5D/stat-calculator/page-cbbe6df546d94314.js",
+  "https://gamers4.life/aion-2/database/_next/static/chunks/2214-a9584c622723d72c.js"
+ ]
+}

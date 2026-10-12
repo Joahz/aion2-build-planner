@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aion 2 Build Planner</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><b>AION 2</b> Build Planner</div>
+  <div class="profiles">
+    <select id="profileSel" title="Saved characters"></select>
+    <button id="btnNew" title="New character">＋ New</button>
+    <button id="btnDup" title="Duplicate this character">Duplicate</button>
+    <button id="btnDel" title="Delete this character">Delete</button>
+    <button id="btnExport" title="Save this character to a file to share">Export</button>
+    <label class="btn" title="Load a character file">Import<input type="file" id="fileImport" accept=".json" hidden></label>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="side">
+    <h3>Character</h3>
+    <label>Name <input id="fName" maxlength="40"></label>
+    <label>Class
+      <select id="fClass"><option value="assassin">Assassin</option><option value="ranger">Ranger</option></select>
+    </label>
+    <label>Level <input id="fLevel" type="number" min="1" max="45"></label>
+    <div class="seg" id="fRace">
+      <button data-v="light">Elyos</button><button data-v="dark">Asmodian</button>
+    </div>
+    <div class="seg" id="fMode">
+      <button data-v="pve">PvE</button><button data-v="pvp">PvP</button>
+    </div>
+    <div class="seg" id="fFocus">
+      <button data-v="single">Single target</button><button data-v="aoe">AoE / packs</button>
+    </div>
+    <div class="classcard" id="classCard"></div>
+  </aside>
+
+  <main>
+    <nav class="tabs" id="tabs">
+      <button data-tab="loadout">Skills &amp; leveling</button>
+      <button data-tab="gear">Gear</button>
+      <button data-tab="rotation">Rotation</button>
+      <button data-tab="macros">Macros</button>
+      <button data-tab="builds">Community builds</button>
+      <button data-tab="about">About</button>
+    </nav>
+    <section id="view"></section>
+  </main>
+</div>
+
+<div id="toast" hidden></div>
+<script src="../data/game-data.js"></script>
+<script src="engine.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>

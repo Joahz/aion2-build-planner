@@ -1,0 +1,40 @@
+name: Build Windows exe
+
+# Every push to main builds the exe and publishes it as the release for the
+# version in package.json. Bump "version" there to make a new release.
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['README.md']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run dist
+      - id: version
+        shell: bash
+        run: echo "tag=v$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: Aion 2 Build Planner ${{ steps.version.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          files: dist/Aion2BuildPlanner.exe
+          body: |
+            Download **Aion2BuildPlanner.exe** below and double-click it. No install needed.
+
+            If Windows says "Windows protected your PC", click **More info → Run anyway** (the exe isn't code-signed).
+

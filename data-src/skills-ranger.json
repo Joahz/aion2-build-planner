@@ -1,0 +1,2379 @@
+{
+ "_fields": {
+  "cooldownMs": "milliseconds",
+  "mpCost": "MP",
+  "rangeCm": "game units (400 = 4m per description text)",
+  "descriptionValues": "highlighted numbers from the description (values at the base/displayed level only)",
+  "specs": "level-gated skill upgrades (\"specialization\" milestones); level = skill level that unlocks the effect",
+  "stigmaMaxLevel": "site build-planner's stigma level cap (stigmaMax map); origin of the number not documented by the site",
+  "daevanionBoostNodes": "daevanion board nodes that add +N skill levels to this skill"
+ },
+ "_missing": [
+  "castTime",
+  "requiredLevel",
+  "per-level damage scaling tables",
+  "explicit chain/combo graph"
+ ],
+ "class": "ranger",
+ "count": 35,
+ "skills": [
+  {
+   "id": "14330000",
+   "name": "Arrow Scattershot",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Deals 96 damage to a target afflicted with Stagger within 20m.",
+   "descriptionValues": [
+    "96"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_033",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_033.ICON_RA_SKILL_033",
+   "specs": [
+    {
+     "level": 8,
+     "text": "Absorbs 5% HP",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "Restores 120 MP on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "Changes to mobile skill",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "Guaranteed Multi-Hit on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "-1s all cooldowns on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310118,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320037,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330038,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340062,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14330000.json"
+  },
+  {
+   "id": "14080000",
+   "name": "Burst Arrow",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target afflicted with Slow or Root within 20m and deal 429 damage to up to 4 enemies within 4m of the target.\n\n15 Stagger Gauge Damage",
+   "descriptionValues": [
+    "429"
+   ],
+   "cooldownMs": 20000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_008",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_008.ICON_RA_SKILL_008",
+   "specs": [
+    {
+     "level": 8,
+     "text": "Absorbs 10% HP",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "+50% Multi-Hit on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "Changes to mobile skill",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "Up to +20% damage when less targets hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "25% chance to reset cooldown on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310155,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320157,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330162,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340070,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14080000.json"
+  },
+  {
+   "id": "14010000",
+   "name": "Deadshot",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Deals 509-1528 damage to a target within 20m. Increases damage by 25% if the caster has Precision.\n\nMax 3 Charge Levels\n10-16 Stagger Gauge Damage",
+   "descriptionValues": [
+    "509-1528"
+   ],
+   "cooldownMs": 20000,
+   "mpCost": 200,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_002",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_002.ICON_RA_SKILL_002",
+   "specs": [
+    {
+     "level": 8,
+     "text": "Removes MP consumed",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "+30% Skill Speed",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "Changes to mobile skill",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "Ignores Block and Evasion and lands as Multi-Hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "25% chance to reset cooldown on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310187,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320041,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330125,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340119,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14010000.json"
+  },
+  {
+   "id": "14260000",
+   "name": "Defiance",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [
+    "bow"
+   ],
+   "description": "Removes Stun, Knockdown, Airborne, Grab, Frost, and Fear from the caster and grants Tenacity for 5s.\nTenacity: Increases Status Effect Resist by 100%",
+   "descriptionValues": [],
+   "cooldownMs": 60000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_CO_SKILL_002",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_CO_SKILL_002.ICON_CO_SKILL_002",
+   "specs": [
+    {
+     "level": 8,
+     "text": "+50% Damage Tolerance for Tenacity duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "Restores 1000 Stamina on casting [Defiance]",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "Restores 20% HP on casting [Defiance]",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "+2s Tenacity duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "25% chance to reset cooldown on casting [Defiance]",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [
+    "Defiance"
+   ],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310108,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320189,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330188,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340164,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14260000.json"
+  },
+  {
+   "id": "14050000",
+   "name": "Drill Dart",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target within 20m and deal 101 damage to up to 4 enemies within 4m of the target and restore 100 MP on landing a Critical Hit. Inflicts Bleed on targets, dealing 6000 damage every 1s for 6000.\n\n5 Stagger Gauge Damage",
+   "descriptionValues": [
+    "101",
+    "6000"
+   ],
+   "cooldownMs": 5000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_005",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_005.ICON_RA_SKILL_005",
+   "specs": [
+    {
+     "level": 8,
+     "text": "Absorbs 3% HP on landing a Critical Hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "+5s Bleed duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "+20% Skill Speed",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "Ignores Block and Evasion and lands as Multi-Hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "50% chance to reset cooldown on landing as a Critical Hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310050,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320185,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330101,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340130,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14050000.json"
+  },
+  {
+   "id": "14170000",
+   "name": "Explosion Trap",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Sets an explosive trap at the caster's location. The trap lasts for 10 seconds and deals 344 damage with a 3000% chance to inflict Stun for 3000 on up to 4 enemies within 5m when stepped on.\n100% chance to inflict Stun on NPC targets.\n\n10 Stagger Gauge Damage",
+   "descriptionValues": [
+    "344"
+   ],
+   "cooldownMs": 20000,
+   "mpCost": 200,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_017",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_017.ICON_RA_SKILL_017",
+   "specs": [
+    {
+     "level": 8,
+     "text": "Pulls enemies on explosion",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "+1s Stun duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "Extra damage after 3s on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "+20% Stun Chance",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "+1 Consecutive Cast(s)",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310071,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320123,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330071,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340096,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14170000.json"
+  },
+  {
+   "id": "14110000",
+   "name": "Gale Arrow",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target within 20m and deal 332 damage to up to 4 enemies within 4m of the target and grant Gale to the caster for 10000.\nGale: Increases Combat Speed by CombatSpeed%\n\n10 Stagger Gauge Damage",
+   "descriptionValues": [
+    "332"
+   ],
+   "cooldownMs": 20000,
+   "mpCost": 200,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_011",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_011.ICON_RA_SKILL_011",
+   "specs": [
+    {
+     "level": 8,
+     "text": "+5s duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "Inflicts Knock Back on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "Changes to mobile skill",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "Up to +8% Combat Speed when less targets hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "-10s cooldown",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310176,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320163,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330108,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340156,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14110000.json"
+  },
+  {
+   "id": "14090000",
+   "name": "Marking Shot",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Deals 117 damage to a target within 20m. Moves the caster in the input direction and grants Precision for 7000.\nPrecision: Increases Critical Hit by Critical\n\n7 Stagger Gauge Damage",
+   "descriptionValues": [
+    "117"
+   ],
+   "cooldownMs": 10000,
+   "mpCost": 50,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_031",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_031.ICON_RA_SKILL_031",
+   "specs": [
+    {
+     "level": 8,
+     "text": "+10% Perfect Chance for the duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "75% chance to inflict Knock Back on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "+3s duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "+1 Consecutive Cast(s)",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "Ignores Block and Evasion and lands as Critical Hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310158,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320095,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330159,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340034,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14090000.json"
+  },
+  {
+   "id": "14130000",
+   "name": "Snare Shot",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target within 20m and deal 55 damage to up to 4 enemies within 4m of the target and inflict Slow, reducing Move Speed by MoveSpeed% for 5000.\n\n10 Stagger Gauge Damage",
+   "descriptionValues": [
+    "55"
+   ],
+   "cooldownMs": 15000,
+   "mpCost": 150,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_013",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_013.ICON_RA_SKILL_013",
+   "specs": [
+    {
+     "level": 8,
+     "text": "+20% Move Speed reduction",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "+20% Skill Speed",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "Changes to mobile skill",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "Adds [Shackling Arrow] Chain Skill",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "+2s Slow and Root duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [
+    "Shackling Arrow"
+   ],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310068,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320069,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330064,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340184,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14130000.json"
+  },
+  {
+   "id": "14020000",
+   "name": "Snipe",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Deals 45 damage to a target within 20m and restores 120 MP.",
+   "descriptionValues": [
+    "45"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_001",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_001.ICON_RA_SKILL_001",
+   "specs": [
+    {
+     "level": 8,
+     "text": "+20% MP restored",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "Absorbs 1.5% HP",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "+50% Multi-Hit on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "-1s [Deadshot] cooldown on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "Adds [Tempest Arrow] Chain Skill",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [
+    "Deadshot",
+    "Tempest Arrow"
+   ],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310131,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320063,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330118,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340192,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14020000.json"
+  },
+  {
+   "id": "14070000",
+   "name": "Suppressing Arrow",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Deals 362 damage to a target within 20m with a 3000% chance to inflict Stun for 3000 while Precision is active.\n100% chance to inflict Stun on NPC targets. \n\n10 Stagger Gauge Damage",
+   "descriptionValues": [
+    "362"
+   ],
+   "cooldownMs": 20000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_007",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_007.ICON_RA_SKILL_007",
+   "specs": [
+    {
+     "level": 8,
+     "text": "+50% Multi-Hit on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "+1s Stun duration",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "+20% Skill Speed",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "+20% Stun Chance",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "25% chance to reset cooldown on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310039,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320131,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330067,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340107,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14070000.json"
+  },
+  {
+   "id": "14340000",
+   "name": "Tempest Shot",
+   "type": "active",
+   "subCategory": "active",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target within 20m and deal 54 damage to up to 4 enemies within 4m of the target.\n1 Stagger Gauge Damage",
+   "descriptionValues": [
+    "54"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 120,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_034",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_034.ICON_RA_SKILL_034",
+   "specs": [
+    {
+     "level": 8,
+     "text": "-20% MP consumed",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_002"
+    },
+    {
+     "level": 8,
+     "text": "+10% skill Critical Hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_003"
+    },
+    {
+     "level": 8,
+     "text": "Up to +12% damage when less targets hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_004"
+    },
+    {
+     "level": 12,
+     "text": "10% chance to inflict Knock Back on hit",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_005"
+    },
+    {
+     "level": 16,
+     "text": "+20% Skill Speed",
+     "icon": "Icon_Item_Usable_Stigma_RA_A_c_001"
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310095,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320103,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330155,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340042,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14340000.json"
+  },
+  {
+   "id": "14120000",
+   "name": "Ambush Kick",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Moves behind a target within 5m and deals 857 damage and inflicts Knock Back. The caster moves back.",
+   "descriptionValues": [
+    "857"
+   ],
+   "cooldownMs": 30000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 500,
+    "min": 500
+   },
+   "icon": "ICON_RA_SKILL_012",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_012.ICON_RA_SKILL_012",
+   "specs": [
+    {
+     "level": 5,
+     "text": "+5m Range",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "10% of Max HP as Protective Shield for 5s on hit",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "50% chance to inflict Stun for 3s on hit",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+50% Stun Chance",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 42,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14120000.json"
+  },
+  {
+   "id": "14270000",
+   "name": "Arrow Storm",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target within 20m and deal 1184 damage to up to 4 enemies within 4m of the target with a 3000% chance to inflict Stun for 3000.\n100% chance to inflict Stun on NPC targets.\n\n50 Stagger Gauge Damage",
+   "descriptionValues": [
+    "1184"
+   ],
+   "cooldownMs": 60000,
+   "mpCost": 200,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_026",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_026.ICON_RA_SKILL_026",
+   "specs": [
+    {
+     "level": 5,
+     "text": "Up to +20% max damage when more targets hit",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "Slow for 10s on hit",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "+1s Stun duration",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+25% Stun Chance",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14270000.json"
+  },
+  {
+   "id": "14700000",
+   "name": "Assault Smite",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target within 20m and deal 902 damage with a 3000% chance to inflict Stun for 3000 to up to 4 enemies within 4m of the target.\n100% chance to inflict Stun on NPC targets.\n\nIncreases Defense by up to 20% proportional to targets hit.",
+   "descriptionValues": [
+    "902"
+   ],
+   "cooldownMs": 120000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_CO_SKILL_003",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_CO_SKILL_003.ICON_CO_SKILL_003",
+   "specs": [
+    {
+     "level": 5,
+     "text": "+20% Attack for 5s on hit",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "500 MP damage on hit",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "+10m Range",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+20% Stun Chance",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 41,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14700000.json"
+  },
+  {
+   "id": "14220000",
+   "name": "Bow of Blessing",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "magic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Increases the caster's Critical Hit by200 for 10s.",
+   "descriptionValues": [
+    "10s"
+   ],
+   "cooldownMs": 120000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_030",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_030.ICON_RA_SKILL_030",
+   "specs": [
+    {
+     "level": 5,
+     "text": "+50% Multi-Hit Chance for duration",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "+100 Accuracy for the duration",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "+20 Critical Damage Boost for duration",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+7% Double Chance for the duration",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14220000.json"
+  },
+  {
+   "id": "14180000",
+   "name": "Ensnaring Trap",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Sets an explosive trap at the caster's location. The trap lasts for 30 seconds and deals 1218 damage and inflicts Airborne for 3000 on up to 4 enemies within 5m.\n\n20 Stagger Gauge Damage",
+   "descriptionValues": [
+    "1218"
+   ],
+   "cooldownMs": 90000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_018",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_018.ICON_RA_SKILL_018",
+   "specs": [
+    {
+     "level": 5,
+     "text": "Adds [Guerilla Strike] Chain Skill",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "Removes up to 3 buffs",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "+1s Airborne duration",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "-30s cooldown",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [
+    "Guerilla Strike"
+   ],
+   "stigmaMaxLevel": 1,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14180000.json"
+  },
+  {
+   "id": "14360000",
+   "name": "Explosive Arrow",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target within 20m and deal 1240 damage to up to 4 enemies within 4m. Increases damage by 20% to targets afflicted with Impact-type status.\n\n20 Stagger Gauge Damage",
+   "descriptionValues": [
+    "1240"
+   ],
+   "cooldownMs": 45000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_023",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_023.ICON_RA_SKILL_023",
+   "specs": [
+    {
+     "level": 5,
+     "text": "-15s cooldown",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "+10% additional damage to targets afflicted with Impact-type status",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "Critical Hit on hit",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+20% additional damage to targets afflicted with Impact-type status",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14360000.json"
+  },
+  {
+   "id": "14060000",
+   "name": "Griffon Arrow",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Select a target within 20m and deal 964 damage to up to 4 enemies within 4m and inflicts Crimson Flames for 10000.\nCrimson Flames: Takes 10000 Fire Damage over Time every 1s. Damage over Time amount increases when targets move.\n\n20 Stagger Gauge Damage",
+   "descriptionValues": [
+    "964",
+    "10000"
+   ],
+   "cooldownMs": 45000,
+   "mpCost": 200,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_006",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_006.ICON_RA_SKILL_006",
+   "specs": [
+    {
+     "level": 5,
+     "text": "Changes to mobile skill",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "+5s Damage over Time duration",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "Enhanced Crimson Flames - Extra damage when hit while afflicted with Crimson Flames",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "-50% Damage over Time intervals",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14060000.json"
+  },
+  {
+   "id": "14150000",
+   "name": "Illusory Arrow",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Deals 1099 to a target within 20m and inflicts Blind for 3000.\n\n15 Stagger Gauge Damage",
+   "descriptionValues": [
+    "1099"
+   ],
+   "cooldownMs": 30000,
+   "mpCost": 200,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_015",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_015.ICON_RA_SKILL_015",
+   "specs": [
+    {
+     "level": 5,
+     "text": "+1s Blind duration",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "Changes to AoE Skill",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "Inflicts Slow for 5s on hit",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+1 Consecutive Cast(s)",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14150000.json"
+  },
+  {
+   "id": "14350000",
+   "name": "Mother Nature's Breath",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "magic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Reduces damage taken from players by 20% for 10s.",
+   "descriptionValues": [],
+   "cooldownMs": 90000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_035",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_035.ICON_RA_SKILL_035",
+   "specs": [
+    {
+     "level": 5,
+     "text": "+200 Critical Hit Resist for duration",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "x1.5 [Vigilant Eye] effect for the duration",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "Removes and grants immunity to Damage over Time effects",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+10% damage reduction",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [
+    "Vigilant Eye"
+   ],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14350000.json"
+  },
+  {
+   "id": "14160000",
+   "name": "Sealing Arrow",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Deals 1043 damage to a target within 20m with a 5000% chance to inflict Seal for 5000.\n100% chance to inflict Seal on NPC targets. \n\n20 Stagger Gauge Damage",
+   "descriptionValues": [
+    "1043"
+   ],
+   "cooldownMs": 60000,
+   "mpCost": 200,
+   "rangeCm": {
+    "max": 2000,
+    "min": 2000
+   },
+   "icon": "ICON_RA_SKILL_016",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_016.ICON_RA_SKILL_016",
+   "specs": [
+    {
+     "level": 5,
+     "text": "50% chance to inflict Root for 5s on hit",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "-1000 Max Stamina for 5s on hit",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "+2s Seal duration",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+25% Seal chance",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14160000.json"
+  },
+  {
+   "id": "14190000",
+   "name": "Stealth",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "magic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Enter Stealth for 10s.\nUsable out of combat and canceled upon entering combat after using Stealth.",
+   "descriptionValues": [],
+   "cooldownMs": 120000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_019",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_019.ICON_RA_SKILL_019",
+   "specs": [
+    {
+     "level": 5,
+     "text": "Critical Hit on attack during Stealth",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "+20% Move Speed for the duration",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "Available in combat",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "+10s Stealth duration",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 1,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14190000.json"
+  },
+  {
+   "id": "14380000",
+   "name": "Supporting Fire",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Summons an orb that provides supporting fire for 15000 near the caster. The orb has a 14380007% chance to fire a shot dealing 191 damage and absorbing 191% of damage as HP.\n\nFiring Cooldown: 14380007",
+   "descriptionValues": [
+    "191"
+   ],
+   "cooldownMs": 90000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_038",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_038.ICON_RA_SKILL_038",
+   "specs": [
+    {
+     "level": 5,
+     "text": "+25% activation chance",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "+15s duration",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "-30s cooldown",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "Critical Hit on hit",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14380000.json"
+  },
+  {
+   "id": "14310000",
+   "name": "Vaizel's Authority",
+   "type": "stigma",
+   "subCategory": "stigma",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "magic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Increases the caster's Attack by 20% for 10s.",
+   "descriptionValues": [
+    "10s"
+   ],
+   "cooldownMs": 60000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_022",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_022.ICON_RA_SKILL_022",
+   "specs": [
+    {
+     "level": 5,
+     "text": "+10% Perfect Chance for the duration",
+     "icon": null
+    },
+    {
+     "level": 10,
+     "text": "x1.5 [Concentrated Fire] effect for the duration",
+     "icon": null
+    },
+    {
+     "level": 15,
+     "text": "x1.5 [Hunter's Soul] effect for the duration",
+     "icon": null
+    },
+    {
+     "level": 20,
+     "text": "50% chance to reduce all skill cooldowns by 1s on Critical Hit for the duration",
+     "icon": null
+    }
+   ],
+   "referencedSkills": [
+    "Concentrated Fire",
+    "Hunter's Soul"
+   ],
+   "stigmaMaxLevel": 40,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14310000.json"
+  },
+  {
+   "id": "14720000",
+   "name": "Concentrated Fire",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Has a 14720007% chance to deal 39 damage to a target taking Damage over Time.\n\nCooldown: 14720007",
+   "descriptionValues": [
+    "39"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_003",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_003.ICON_RA_SKILL_Passive_003",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310037,
+     "plusLevels": 1
+    },
+    {
+     "board": "Nezekan",
+     "nodeId": 310163,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330191,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340065,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14720000.json"
+  },
+  {
+   "id": "14740000",
+   "name": "Focused Eye",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Increases the caster's Accuracy by 100, PvE Damage Boost by 1%, PvP Damage Boost by 0.5%, Smite by 0.2%.",
+   "descriptionValues": [
+    "1%",
+    "0.5%",
+    "0.2%"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_001",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_001.ICON_RA_SKILL_Passive_001",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310073,
+     "plusLevels": 1
+    },
+    {
+     "board": "Nezekan",
+     "nodeId": 310126,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330186,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340074,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14740000.json"
+  },
+  {
+   "id": "14750000",
+   "name": "Hunter's Resolve",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Increases the caster's Critical Damage Boost by 6%.",
+   "descriptionValues": [
+    "6%"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_011",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_011.ICON_RA_SKILL_Passive_011",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310100,
+     "plusLevels": 1
+    },
+    {
+     "board": "Nezekan",
+     "nodeId": 310153,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330073,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340124,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14750000.json"
+  },
+  {
+   "id": "14800000",
+   "name": "Hunter's Soul",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Has a 14800007% chance to deal 265 damage on a Critical Hit.\n\nCooldown: 14800007",
+   "descriptionValues": [
+    "265"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_007",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_007.ICON_RA_SKILL_Passive_007",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Zikel",
+     "nodeId": 320050,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320144,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330130,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340037,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14800000.json"
+  },
+  {
+   "id": "14780000",
+   "name": "Melee Fire",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Has a 14780007% chance to inflict Knock Back when landing an attack on a target within 5m. Has a 14780008% chance to deal 135 extra damage when landing an attack on a target beyond 5m.\n\nCooldown: 14780007",
+   "descriptionValues": [
+    "135"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_013",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_013.ICON_RA_SKILL_Passive_013",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14780000.json"
+  },
+  {
+   "id": "14790000",
+   "name": "Revitalization Contract",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Increases the caster's Status Effect Resist by 16.5%. Increases Status Effect Resist by 10% for 5s when hit while afflicted with Stun, Knockdown, Airborne, Frost, or Fear (up to 10 stacks).\nImmediately restores 35% Max HP when HP is 10% or less.\n\nHealing Cooldown: 60s\nStatus Effect Resist Cooldown: 1s",
+   "descriptionValues": [
+    "16.5%",
+    "35%"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_AS_SKILL_Passive_009",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_AS_SKILL_Passive_009.ICON_AS_SKILL_Passive_009",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Zikel",
+     "nodeId": 320072,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320126,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330096,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340189,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14790000.json"
+  },
+  {
+   "id": "14770000",
+   "name": "Rooting Eye",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Has a 14770007% chance to deal 143 damage when landing an attack on a target afflicted with Slow or Root.\n\nCooldown: 14770007",
+   "descriptionValues": [
+    "143"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_008",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_008.ICON_RA_SKILL_Passive_008",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14770000.json"
+  },
+  {
+   "id": "14760000",
+   "name": "Unyielding Resolve",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Increases the caster's Ailment-type Resist by 13%.",
+   "descriptionValues": [
+    "13%"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_012",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_012.ICON_RA_SKILL_Passive_012",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Zikel",
+     "nodeId": 320039,
+     "plusLevels": 1
+    },
+    {
+     "board": "Zikel",
+     "nodeId": 320187,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330142,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340039,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14760000.json"
+  },
+  {
+   "id": "14710000",
+   "name": "Vigilant Eye",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Increases the caster's Evasion by 200, Max HP by 6%, and restores 85-102 HP on Evasion.\n\nCooldown: 3s",
+   "descriptionValues": [
+    "6%",
+    "85-102"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_004",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_004.ICON_RA_SKILL_Passive_004",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310063,
+     "plusLevels": 1
+    },
+    {
+     "board": "Nezekan",
+     "nodeId": 310189,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330035,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340161,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14710000.json"
+  },
+  {
+   "id": "14730000",
+   "name": "Wind Vigor",
+   "type": "passive",
+   "subCategory": "passive",
+   "class": "ranger",
+   "grade": 21,
+   "damageType": "physic",
+   "weapons": [
+    "bow"
+   ],
+   "description": "Increases Max Stamina by 15. Increases Move Speed by 10% for 1s when attacked.\n\nCooldown: 5s",
+   "descriptionValues": [
+    "15",
+    "10%",
+    "1s"
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_RA_SKILL_Passive_006",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_RA_SKILL_Passive_006.ICON_RA_SKILL_Passive_006",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [
+    {
+     "board": "Nezekan",
+     "nodeId": 310041,
+     "plusLevels": 1
+    },
+    {
+     "board": "Nezekan",
+     "nodeId": 310185,
+     "plusLevels": 1
+    },
+    {
+     "board": "Vaizel",
+     "nodeId": 330040,
+     "plusLevels": 1
+    },
+    {
+     "board": "Triniel",
+     "nodeId": 340152,
+     "plusLevels": 1
+    }
+   ],
+   "source": "https://gamers4.life/aion-2/database/db/skill/14730000.json"
+  }
+ ],
+ "commonSkills": [
+  {
+   "id": "1006",
+   "name": "Daevanion",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Undeveloped\nDaevanion becomes available.",
+   "descriptionValues": [
+    "Undeveloped\nDaevanion becomes available."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1006.json"
+  },
+  {
+   "id": "1101",
+   "name": "Dash",
+   "type": "active",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Descend forward rapidly for 2s.",
+   "descriptionValues": [
+    "2s."
+   ],
+   "cooldownMs": 3000,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1101.json"
+  },
+  {
+   "id": "1009",
+   "name": "Divine Heal",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Undeveloped\nRecover Divine Power when attacking monsters with Divine Power.",
+   "descriptionValues": [
+    "Undeveloped\nRecover Divine Power when attacking monsters with Divine Power."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1009.json"
+  },
+  {
+   "id": "1202",
+   "name": "Divine Heal Increase",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Undeveloped\nDivine Power Regen amount increases when attacking monsters with Divine Power.",
+   "descriptionValues": [
+    "Undeveloped\nDivine Power Regen amount increases when attacking monsters with Divine Power."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1202.json"
+  },
+  {
+   "id": "1203",
+   "name": "Divine Power Boost",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Increases Max Divine Power by 500.",
+   "descriptionValues": [],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1203.json"
+  },
+  {
+   "id": "1201",
+   "name": "Divine Power Increase",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Increases Max Divine Power by 1,000.",
+   "descriptionValues": [],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1201.json"
+  },
+  {
+   "id": "1002",
+   "name": "Flight",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Undeveloped\nFlight becomes available.",
+   "descriptionValues": [
+    "Undeveloped\nFlight becomes available."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1002.json"
+  },
+  {
+   "id": "1001",
+   "name": "Glide",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Undeveloped\nGlide becomes available.",
+   "descriptionValues": [
+    "Undeveloped\nGlide becomes available."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1001.json"
+  },
+  {
+   "id": "1004",
+   "name": "Mount",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Undeveloped\nMount becomes available.",
+   "descriptionValues": [
+    "Undeveloped\nMount becomes available."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1004.json"
+  },
+  {
+   "id": "1102",
+   "name": "Quick Gliding",
+   "type": "active",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Hold the W Key to descend forward rapidly.\nAcceleration is applied to gradually increase gliding speed.\nAdjusting the camera downward applies greater acceleration.",
+   "descriptionValues": [
+    "W Key to descend forward rapidly.\nAcceleration is applied to gradually increase gliding speed.\nAdjusting the camera downward applies greater acceleration."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1102.json"
+  },
+  {
+   "id": "1008",
+   "name": "Sprint",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Undeveloped\nSprint becomes available.",
+   "descriptionValues": [
+    "Undeveloped\nSprint becomes available."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": "ICON_CO_SKILL_003",
+   "iconPath": "/assets/Game/UI/Resource/Texture/Skill/ICON_CO_SKILL_003.ICON_CO_SKILL_003",
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1008.json"
+  },
+  {
+   "id": "1005",
+   "name": "Substance Morph",
+   "type": "passive",
+   "subCategory": "common",
+   "class": "common",
+   "grade": 21,
+   "damageType": null,
+   "weapons": [],
+   "description": "Undeveloped\nSubstance Morph becomes available.",
+   "descriptionValues": [
+    "Undeveloped\nSubstance Morph becomes available."
+   ],
+   "cooldownMs": 0,
+   "mpCost": 0,
+   "rangeCm": {
+    "max": 0,
+    "min": 0
+   },
+   "icon": null,
+   "iconPath": null,
+   "specs": [],
+   "referencedSkills": [],
+   "stigmaMaxLevel": null,
+   "daevanionBoostNodes": [],
+   "source": "https://gamers4.life/aion-2/database/db/skill/1005.json"
+  }
+ ]
+}

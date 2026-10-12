@@ -1,0 +1,123 @@
+{
+ "_note": "No per-class base stats (HP/attack/etc.) are published by the site; baseStats is null.",
+ "classes": [
+  {
+   "key": "assassin",
+   "classId": "assassin",
+   "classIdNote": "site uses the lowercase key as class id (e.g. /db/daevanion/assassin.json); numeric emblem index in site JS: 3",
+   "name": "Assassin",
+   "nameKo": "살성",
+   "role": "Melee DPS",
+   "weaponLabel": "Dagger",
+   "weaponSlots": [
+    "dagger"
+   ],
+   "skillCount": {
+    "stigma": 13,
+    "active": 12,
+    "passive": 10
+   },
+   "tagline": "Stealth dagger duelist that opens from the shadows and bursts targets down.",
+   "summary": "The Assassin is a high-burst melee striker built around stealth and positioning. From concealment it opens with Ambush and Shadowstrike, then pours out fast hits like Quick Slice and Whirlwind Slice before vanishing again through Shadow Walk or Smoke Bomb. Mobility from Shadowstep and tricks like Illusive Clone let it choose every engagement, while finishers such as Heart Gore close the deal. Fragile but lethal, it deletes priority targets and slips away clean.",
+   "playstyle": "A hit-and-run assassin that lives on timing. Stay hidden, line up a stealth opener, unload your burst, then disengage before the enemy can answer. Best for players who enjoy stalking targets, precise execution and a high-risk, high-reward rhythm.",
+   "guide": {
+    "gearPriority": "Start with a strong dagger and the highest item-level armor you can use, then tune sub-stats around Attack, Critical, Damage Boost.",
+    "partyRole": "Assassin should keep uptime high and save burst/control windows for priority targets instead of wasting cooldowns into downtime.",
+    "suggestedStats": [
+     "Attack",
+     "Critical",
+     "Damage Boost",
+     "Accuracy",
+     "Frontal Attack"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Assassin — quick overview",
+     "a": "Inside the party, the Assassin fills the DPS / Burst slot — your team relies on this kit for that responsibility."
+    },
+    {
+     "q": "Recommended weapon for the Assassin",
+     "a": "Dual Daggers is the signature pick — most builds are designed around it."
+    },
+    {
+     "q": "Is the Assassin faction-locked?",
+     "a": "No — there's no faction restriction. Pick this class as Elyos or as Asmodian, your call."
+    },
+    {
+     "q": "Skill arsenal at a glance",
+     "a": "Around 35 skills in total: 25 actives you cast in combat and 10 passives that always run in the background."
+    },
+    {
+     "q": "Where does the Assassin shine — PvE or PvP?",
+     "a": "The kit performs in both, but its identity tilts toward the role above — meta picks usually fit dungeons and raids with that focus."
+    },
+    {
+     "q": "Is the Assassin beginner-friendly?",
+     "a": "It depends on how comfortable you are managing cooldowns and positioning. Players new to the role should expect a learning curve; the payoff is significant once it clicks."
+    }
+   ],
+   "baseStats": null,
+   "source": "https://gamers4.life/aion-2/database/en/classes/assassin/"
+  },
+  {
+   "key": "ranger",
+   "classId": "ranger",
+   "classIdNote": "site uses the lowercase key as class id (e.g. /db/daevanion/assassin.json); numeric emblem index in site JS: 4",
+   "name": "Ranger",
+   "nameKo": "궁성",
+   "role": "Ranged DPS",
+   "weaponLabel": "Bow",
+   "weaponSlots": [
+    "bow"
+   ],
+   "skillCount": {
+    "stigma": 13,
+    "active": 12,
+    "passive": 10
+   },
+   "tagline": "Bow specialist that owns the open ground with precision shots and traps.",
+   "summary": "The Ranger is Aion 2's ranged physical dealer, fighting at distance with a bow. It mixes heavy single-target shots like Deadshot and Snipe with area fire such as Arrow Storm and Tempest Shot, then shapes the battlefield using Explosion Trap, Ensnaring Trap and Snare Shot. Stealth and kiting tools keep it out of melee while it whittles enemies down. It rewards spacing, target priority and well-placed trap setups.",
+   "playstyle": "A kiting marksman. Pre-place traps, keep distance from threats, and weave snares between burst shots so nothing ever closes on you. Suits players who like positioning, zone control and punishing mistakes from range.",
+   "guide": {
+    "gearPriority": "Start with a strong bow and the highest item-level armor you can use, then tune sub-stats around Attack, Critical, Accuracy.",
+    "partyRole": "Ranger should keep uptime high and save burst/control windows for priority targets instead of wasting cooldowns into downtime.",
+    "suggestedStats": [
+     "Attack",
+     "Critical",
+     "Accuracy",
+     "Damage Boost",
+     "Move Speed"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Ranger — quick overview",
+     "a": "Inside the party, the Ranger fills the Ranged DPS slot — your team relies on this kit for that responsibility."
+    },
+    {
+     "q": "Recommended weapon for the Ranger",
+     "a": "Bow is the signature pick — most builds are designed around it."
+    },
+    {
+     "q": "Is the Ranger faction-locked?",
+     "a": "No — there's no faction restriction. Pick this class as Elyos or as Asmodian, your call."
+    },
+    {
+     "q": "Skill arsenal at a glance",
+     "a": "Around 35 skills in total: 25 actives you cast in combat and 10 passives that always run in the background."
+    },
+    {
+     "q": "Where does the Ranger shine — PvE or PvP?",
+     "a": "The kit performs in both, but its identity tilts toward the role above — meta picks usually fit dungeons and raids with that focus."
+    },
+    {
+     "q": "Is the Ranger beginner-friendly?",
+     "a": "It depends on how comfortable you are managing cooldowns and positioning. Players new to the role should expect a learning curve; the payoff is significant once it clicks."
+    }
+   ],
+   "baseStats": null,
+   "source": "https://gamers4.life/aion-2/database/en/classes/ranger/"
+  }
+ ]
+}
