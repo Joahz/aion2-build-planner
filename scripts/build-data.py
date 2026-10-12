@@ -21,7 +21,7 @@ def skill(s):
         'damageType': s.get('damageType'), 'desc': s['description'],
         'cd': s.get('cooldownMs') or 0, 'mp': s.get('mpCost') or 0,
         'range': (s.get('rangeCm') or {}).get('max'),
-        'icon': s.get('icon'),
+        'icon': icon_name(s.get('iconPath')) or s.get('icon'),
         'specs': [{'lvl': x['level'], 'text': x['text']} for x in s.get('specs') or []],
         'refs': s.get('referencedSkills') or [],
         'boosts': [{'board': b['board'], 'node': b['nodeId'], 'plus': b['plusLevels']}
@@ -29,14 +29,18 @@ def skill(s):
     }
 
 
-def item(i):
+def icon_name(path):
+    return path.rstrip('/').rsplit('/', 1)[-1].split('.', 1)[0] if path else None
+
+
+def item(i, icons):
     d = i.get('detail') or {}
     name = i['name']
     # The source names some necklaces "... Earrings"; the slot is right, the name isn't.
     if i['slot'] == 'necklace' and name.endswith(' Earrings'):
         name = name[: -len(' Earrings')] + ' Necklace'
     out = {
-        'id': i['id'], 'name': name, 'race': i.get('race') or 'all', 'slot': i['slot'], 'grade': i.get('gradeName'),
+        'id': i['id'], 'name': name, 'race': i.get('race') or 'all', 'icon': icon_name(icons.get(i['id'])), 'slot': i['slot'], 'grade': i.get('gradeName'),
         'level': i.get('level'), 'ilvl': i.get('itemLevel'), 'family': i.get('family'),
         'maxEnch': i.get('maxEnchantBonus') or {},
     }
@@ -64,7 +68,8 @@ def main():
         }
     for s in stats['definitions']:
         data['stats'][s['id']] = {'label': s['label'] or s['id'], 'pct': s['isPercent'], 'group': s['group']}
-    data['items'] = [item(i) for i in load('items-scout.json')['items']]
+    icons = load('item-icons.json')
+    data['items'] = [item(i, icons) for i in load('items-scout.json')['items']]
     for b in builds:
         if not b['skills']:
             continue

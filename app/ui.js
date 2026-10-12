@@ -60,6 +60,22 @@ function setLoadout(p, lo) {
 const flatLoadout = (lo) => [...lo.active, ...lo.stigma, ...lo.passive];
 const initials = (name) => name.split(/[\s']+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
 
+// Game icons live in app/icons/<name>.webp. If one is missing, the <img> is
+// swapped for coloured initials (handled by the error listener below).
+function skillIcon(s) {
+  return `<div class="ic ${s.type}" title="${esc(s.name)}">${s.icon ? `<img src="icons/${esc(s.icon)}.webp" alt="" data-fallback="${esc(initials(s.name))}">` : esc(initials(s.name))}</div>`;
+}
+function itemIcon(i, size = 'sm') {
+  if (!i || !i.icon) return '';
+  return `<img class="item-ic ${size} gr-${esc(i.grade)}" src="icons/${esc(i.icon)}.webp" alt="" data-fallback="">`;
+}
+document.addEventListener('error', (e) => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement) || !img.hasAttribute('data-fallback')) return;
+  const text = img.getAttribute('data-fallback');
+  if (text) img.replaceWith(document.createTextNode(text)); else img.remove();
+}, true);
+
 // ---- Sidebar -----------------------------------------------------------------
 
 function renderSide() {
@@ -143,7 +159,7 @@ function skillRow(x, p, { inLoadout, type }) {
   const s = x.skill;
   const lvl = p.levels[s.id] || 1;
   return `<div class="skill ${selectedSkill === s.id ? 'sel' : ''}" data-skill="${esc(s.id)}">
-    <div class="ic ${s.type}">${esc(initials(s.name))}</div>
+    ${skillIcon(s)}
     <div><div class="nm">${esc(s.name)}</div><div class="why">${esc(x.why.slice(0, 3).join(' · '))}</div></div>
     <div class="row">
       ${s.type !== 'passive' && inLoadout ? `<input type="number" min="1" max="${E.MAX_LEVEL[s.type]}" value="${lvl}" data-level="${esc(s.id)}" title="Your skill level">` : ''}
@@ -221,7 +237,7 @@ function skillDetail(s, p) {
     s.cd ? `${s.cd / 1000}s cooldown` : 'no cooldown', s.mp ? `${s.mp} MP` : null,
     s.range ? `${s.range / 100}m range` : null, a.aoe ? 'hits up to 4' : null,
   ].filter(Boolean);
-  return `<div class="row"><div class="ic ${s.type}">${esc(initials(s.name))}</div>
+  return `<div class="row">${skillIcon(s)}
       <div><h2 style="margin:0">${esc(s.name)}</h2><span class="muted">${esc(s.type)} · ${esc(facts.join(' · '))}</span></div></div>
     <p>${esc(E.cleanText(s.desc))}</p>
     ${s.specs.length ? `<h3 style="margin-top:12px">Upgrades by skill level</h3>
@@ -248,14 +264,14 @@ function viewGear() {
     const gap = bySlot[slot].gap;
     return `<tr>
       <td><b>${esc(label)}</b></td>
-      <td><select data-slot="${slot}"><option value="">— empty —</option>
+      <td><div class="row">${itemIcon(cur && itemById.get(cur.id))}<select data-slot="${slot}"><option value="">— empty —</option>
         ${options.map((i) => `<option value="${esc(i.id)}" ${cur && cur.id === i.id ? 'selected' : ''} ${i.level > p.level ? 'disabled' : ''}>${esc(itemLabel(i))}</option>`).join('')}
-      </select></td>
+      </select></div></td>
       <td><input type="number" min="0" max="20" value="${cur ? cur.enchant || 0 : 0}" data-ench="${slot}" ${cur ? '' : 'disabled'} title="Enchant level"></td>
-      <td>${best.length ? `<span class="grade-${esc(best[0].item.grade)}">${esc(best[0].item.name)}</span>
+      <td>${best.length ? `<div class="row" style="align-items:flex-start">${itemIcon(best[0].item)}<div><span class="grade-${esc(best[0].item.grade)}">${esc(best[0].item.name)}</span>
         <span class="muted small-text">iLvl ${best[0].item.ilvl}</span>
         ${best[0].item.drops ? `<div class="small-text muted">Drops from ${esc(best[0].item.drops.join(', '))}</div>` : ''}
-        ${best.length > 1 ? `<div class="small-text muted">or ${best.slice(1).map((b) => `${esc(b.item.name)} (${b.item.ilvl})`).join(', ')}</div>` : ''}` : '<span class="muted">—</span>'}</td>
+        ${best.length > 1 ? `<div class="small-text muted">or ${best.slice(1).map((b) => `${esc(b.item.name)} (${b.item.ilvl})`).join(', ')}</div>` : ''}</div></div>` : '<span class="muted">—</span>'}</td>
       <td>${gap > 0 ? `<span class="up">+${gap}</span>` : '<span class="muted">✓</span>'}</td>
     </tr>`;
   }).join('');
@@ -271,7 +287,7 @@ function viewGear() {
         <tbody>${rows}</tbody></table></div>
       <div>
         <div class="card"><h3>Upgrade these first</h3>
-          ${upgrades.length ? `<ol class="steps">${upgrades.map((u) => `<li><b>${esc(u.label)}</b>: <span class="grade-${esc(u.best.grade)}">${esc(u.best.name)}</span>
+          ${upgrades.length ? `<ol class="steps">${upgrades.map((u) => `<li>${itemIcon(u.best)} <b>${esc(u.label)}</b>: <span class="grade-${esc(u.best.grade)}">${esc(u.best.name)}</span>
             <span class="up">+${u.gap} iLvl</span>${u.current ? `<div class="small-text muted">replaces ${esc(u.current.name)}</div>` : ''}</li>`).join('')}</ol>`
             : '<p class="muted">You have the best item level available in every slot. Push enchants next.</p>'}
         </div>
@@ -316,7 +332,7 @@ function viewRotation() {
   const { rot, tl } = rotationFor(p);
   const groups = Object.entries(GROUP_INFO).filter(([g]) => rot.groups[g].length).map(([g, [title, note]]) => `
     <div class="group"><h4>${esc(title)}</h4><div class="small-text muted">${esc(note)}</div>
-      ${rot.groups[g].map((x) => `<span class="chip">${esc(x.skill.name)}${x.a.cdSec ? ` · ${x.a.cdSec}s` : ''}</span>`).join('')}</div>`).join('');
+      ${rot.groups[g].map((x) => `<span class="chip with-ic">${x.skill.icon ? `<img src="icons/${esc(x.skill.icon)}.webp" alt="" data-fallback="">` : ''}${esc(x.skill.name)}${x.a.cdSec ? ` · ${x.a.cdSec}s` : ''}</span>`).join('')}</div>`).join('');
   $('view').innerHTML = `
     <h2>Rotation — ${p.focus === 'aoe' ? 'AoE / packs' : 'single target'}</h2>
     <p class="note">Built from your equipped skills: buffs first, then skills that set up states your hitters need (Stun, Slow, Precision, Insignias…), then the biggest hits, with filler in between.</p>
@@ -333,7 +349,7 @@ function viewRotation() {
           <select id="simGcd">${[0.8, 1, 1.2, 1.5].map((g) => `<option ${g === p.sim.gcd ? 'selected' : ''}>${g}</option>`).join('')}</select>
           Length <select id="simLen">${[20, 30, 60].map((g) => `<option ${g === p.sim.seconds ? 'selected' : ''}>${g}</option>`).join('')}</select>s
         </div></div>
-      <div class="timeline">${tl.map((e) => `<span class="tl"><b>${e.t}s</b>${esc(e.skill.name)}</span>`).join('')}</div>
+      <div class="timeline">${tl.map((e) => `<span class="tl"><b>${e.t}s</b>${e.skill.icon ? `<img src="icons/${esc(e.skill.icon)}.webp" alt="" data-fallback="">` : ''}${esc(e.skill.name)}</span>`).join('')}</div>
       <p class="note">Assumes each press takes the same time (cast times aren't published), MP starts full and every hit lands. Use it to learn the order, not as an exact DPS figure.</p>
     </div>`;
   $('simGcd').onchange = (e) => { p.sim.gcd = +e.target.value; save(); render(); };
@@ -354,7 +370,7 @@ function viewMacros() {
     <h2>Macros &amp; key sequences</h2>
     <p class="note">Set the key each skill is bound to in game, and the sequences below update to match. Copy them to practise, to keep on a second screen, or to paste into the game's macro window if your client has one. This app never presses keys for you: automated input is against the game's rules.</p>
     <div class="card"><h3>Your keybinds</h3><div class="keys">
-      ${usable.map((x) => `<label><span>${esc(x.skill.name)}</span><input maxlength="12" value="${esc(p.keys[x.skill.id])}" data-key="${esc(x.skill.id)}"></label>`).join('')}
+      ${usable.map((x) => `<label><span class="row">${skillIcon(x.skill)}${esc(x.skill.name)}</span><input maxlength="12" value="${esc(p.keys[x.skill.id])}" data-key="${esc(x.skill.id)}"></label>`).join('')}
     </div></div>
     <div class="card">${seqs.map((m, i) => `<div class="macro">
       <div class="row spread"><div><b>${esc(m.name)}</b> <span class="muted small-text">${esc(m.note)}</span></div>
@@ -389,7 +405,7 @@ function viewBuilds() {
         <div class="row spread"><div><b>${esc(b.title)}</b> <span class="muted">by ${esc(b.author)} · ${b.views} views</span></div>
           <div class="row"><span class="muted small-text">${overlap}/${skills.length} skills match yours</span>
           ${skills.length >= 8 ? `<button class="small" data-apply="${b.id}">Use these skills</button>` : ''}</div></div>
-        <div>${skills.map((s) => `<span class="chip ${mine.has(s.id) ? 'good' : ''}">${esc(s.name)}</span>`).join('')}</div>
+        <div>${skills.map((s) => `<span class="chip with-ic ${mine.has(s.id) ? 'good' : ''}">${s.icon ? `<img src="icons/${esc(s.icon)}.webp" alt="" data-fallback="">` : ''}${esc(s.name)}</span>`).join('')}</div>
         ${gear.length ? `<details><summary class="muted small-text">Gear (${gear.length})</summary><div class="small-text">${esc([...new Set(gear)].join(', '))}</div></details>` : ''}
       </div>`;
     }).join('') : `<div class="card"><p class="muted">No public ${esc(G.classes[p.class].name)} builds with skills chosen yet. Recommendations use the skill data alone.</p></div>`}`;

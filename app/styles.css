@@ -83,6 +83,8 @@ main { padding: 0 20px 40px; min-width: 0; }
   width: 30px; height: 30px; border-radius: 6px; display: grid; place-items: center;
   font-weight: 700; font-size: 12px; color: #0e1016;
 }
+.ic img { width: 100%; height: 100%; border-radius: 6px; display: block; }
+.ic:has(img) { background: none; box-shadow: 0 0 0 1px var(--line); }
 .ic.active { background: var(--active); } .ic.stigma { background: var(--stigma); } .ic.passive { background: var(--passive); }
 .skill .nm { font-weight: 600; }
 .skill .why { color: var(--muted); font-size: 11px; }
@@ -142,3 +144,14 @@ td select { max-width: 100%; width: 100%; }
   .layout { grid-template-columns: 1fr; }
   .side { border-right: 0; border-bottom: 1px solid var(--line); }
 }
+
+.item-ic { border-radius: 6px; background: var(--panel2); flex: none; box-shadow: 0 0 0 1px var(--line); vertical-align: middle; }
+.item-ic.sm { width: 32px; height: 32px; }
+.steps .item-ic { width: 24px; height: 24px; margin-right: 4px; }
+.item-ic.gr-Rare { box-shadow: 0 0 0 1px #5fb3ff; } .item-ic.gr-Epic { box-shadow: 0 0 0 1px #c38bff; }
+.item-ic.gr-Unique { box-shadow: 0 0 0 1px #ffb84d; } .item-ic.gr-Heroic { box-shadow: 0 0 0 1px #ff7a59; }
+.item-ic.gr-Mythic { box-shadow: 0 0 0 1px #ff5c8a; }
+.chip.with-ic, .tl { display: inline-flex; align-items: center; gap: 4px; }
+.chip.with-ic img { width: 16px; height: 16px; border-radius: 3px; }
+.tl img { width: 18px; height: 18px; border-radius: 3px; }
+.keys .ic { width: 22px; height: 22px; font-size: 10px; }
