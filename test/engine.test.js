@@ -101,3 +101,11 @@ test('cleanText fixes template numbers', () => {
   assert.strictEqual(E.cleanText('Has a 13770007% chance'), 'Has a ? chance');
   assert.strictEqual(E.cleanText('100% chance on NPC'), '100% chance on NPC');
 });
+
+test('every skill and item icon is bundled', () => {
+  const dir = path.join(__dirname, '../app/icons');
+  const missing = [];
+  for (const c of Object.values(G.classes)) for (const s of c.skills) if (!s.icon || !fs.existsSync(path.join(dir, s.icon + '.webp'))) missing.push(s.name);
+  for (const i of G.items) if (!i.icon || !fs.existsSync(path.join(dir, i.icon + '.webp'))) missing.push(i.name);
+  assert.deepStrictEqual(missing, []);
+});

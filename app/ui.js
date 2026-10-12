@@ -339,7 +339,7 @@ function viewRotation() {
     <div class="grid2">
       <div class="card"><h3>Priority</h3>${groups}</div>
       <div class="card"><h3>Priority list</h3>
-        <ol class="steps">${rot.priority.map((x) => `<li><b>${esc(x.skill.name)}</b>
+        <ol class="steps">${rot.priority.map((x) => `<li>${x.skill.icon ? `<img class="item-ic" style="width:22px;height:22px;margin-right:4px" src="icons/${esc(x.skill.icon)}.webp" alt="" data-fallback="">` : ''}<b>${esc(x.skill.name)}</b>
           <span class="muted small-text">${x.a.requires.length ? 'only when target has ' + esc(x.a.requires.map((g) => g.join('/')).join(', ')) : x.a.prefers.length ? 'better with ' + esc(x.a.prefers.join(', ')) : ''}</span></li>`).join('')}</ol>
       </div>
     </div>

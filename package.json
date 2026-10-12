@@ -1,6 +1,6 @@
 {
   "name": "aion2-build-planner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Aion 2 character planner for Assassin and Ranger: skills, gear, rotation and macros",
   "author": "Aion 2 Build Planner",
   "main": "main.js",

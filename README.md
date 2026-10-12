@@ -47,6 +47,8 @@ Treat the results as a strong starting point and adjust them in game.
 Game data is a snapshot of the fan database at
 [gamers4.life](https://gamers4.life/aion-2/database/en/). `data-src/` holds the
 extracted JSON and `data-src/SOURCES.md` lists exactly what is and isn't covered.
+Skill and item icons are bundled in `app/icons/`; `python3 scripts/fetch-icons.py`
+downloads any that are missing.
 
 - **Known gaps:** no cast times, no per-level damage tables, and full stats only
   for Heroic/Mythic gear and Unique weapons.
